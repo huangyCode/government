@@ -1,0 +1,147 @@
+.home-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-size: 0;
+
+    .main-bg {
+        width: 100%;
+        height: auto;
+    }
+    
+    .wheel-bg,
+    .wheel-bg-surf-layer {
+        position: absolute;
+        top: 280px;
+        left: 50%;
+        width: 630px;
+        height: 630px;
+        margin-left: -315px;
+    }
+
+
+    @keyframes showHitBg
+    {
+        from {opacity: 0.1;}
+        to {opacity: 1;}
+    }
+    
+    .prize-hit-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        animation: showHitBg 2s 1;
+    }
+
+    .close-prize-hit-bg {
+        position: absolute;
+        top: 44px;
+        right: 60px;
+        font-family: PingFang-SC-Regular;
+        font-size: 28px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        margin: 20px;
+    }
+    
+    .start-btn-bg, .prize-hit-start-bg {
+        position: absolute;
+        top: 486px;
+        left: 50%;
+        width: 200px;
+        height: 218px;
+        margin-left: -100px;
+    }
+    
+    .got-tip {
+        position: absolute;
+        top: 724px;
+        left: 0;
+        right: 0;
+        text-align: center;
+
+        @keyframes showPrizeTip
+        {
+            0%   { transform: scale(0.5);}
+            50%  { transform: scale(1.5);}
+            100% { transform: scale(1);}
+        }
+
+        @keyframes showTryAgain
+        {
+            0%   { opacity: 0;}
+            98%  { opacity: 0;}
+            100% { opacity: 1;}
+        }
+
+        .prize-tip {
+            font-family: PingFang-SC-Semibold;
+            font-size: 40px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            text-align: center;
+            animation: showPrizeTip 1s 1;
+        }
+      
+        .try-again {
+            display: inline-block;
+            width: 176px;
+            height: 60px;
+            margin-top: 40px;
+            border: 1px solid #FFFFFF;
+            font-family: PingFang-SC-Regular;
+            font-size: 28px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            line-height: 58px;
+            animation: showTryAgain 1s 1;
+        }
+    }
+    
+    .rule-btn {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        width: 154px;
+        height: 62px;
+    }
+    
+    .share-btn {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        width: 154px;
+        height: 62px;
+    }
+    
+    .tips {
+        position: absolute;
+        top: 970px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        
+        .tip-1 {
+            font-family: PingFang-SC-Semibold;
+            font-size: 40px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+        }
+        
+        .tip-2 {
+            font-family: PingFang-SC-Regular;
+            font-size: 24px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+        }
+    }
+    
+    .bottom-btns {
+        position: absolute;
+        top: 1100px;
+        left: 0;
+        right: 0;
+    }
+}
