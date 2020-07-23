@@ -6,7 +6,6 @@ import listJson from '../../listJson'
 
 export default class ServiceDetail extends PureComponent {
     constructor(props) {
-        document.title = '我的奖品';
         super(props);
         this.state = {
             detail: {}
