@@ -9,10 +9,16 @@ const router = require('./' + config.currentApp +'/router');
 const routers = () => {
     let arr = [];
     Object.keys(router).forEach((key,index)=> {
-        if(index === 0){
-            arr.push(<Route key={index} exact path={config.routerPath[config.currentApp] + '/'+key+'.html'} component={router[key]}/>)
+        let path = ''
+        if(config.routerPath[config.currentApp]){
+            path = config.routerPath[config.currentApp] + '/'+key+'.html'
         }else{
-            arr.push(<Route key={index} path={config.routerPath[config.currentApp] + '/'+key+'.html'} component={ router[key]}/>)
+            path = '/'+key+'.html'
+        }
+        if(index === 0){
+            arr.push(<Route key={index} exact path={path} component={router[key]}/>)
+        }else{
+            arr.push(<Route key={index} path={path} component={ router[key]}/>)
         }
     })
     return arr;

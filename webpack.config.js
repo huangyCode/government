@@ -100,7 +100,7 @@ module.exports = {
         ]
     },
     devServer: {
-        publicPath: config.routerPath[config.currentApp],
+        publicPath: config.routerPath[config.currentApp] || '',
         port: 8080,
         disableHostCheck: true,
     },

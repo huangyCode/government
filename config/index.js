@@ -2,14 +2,14 @@ const currentApp = 'government';
 module.exports = {
     production: {
         routerPath: {
-            government: '/government',
+            government: '',
         },
         domain: '',
         currentApp
     },
     development: {
         routerPath: {
-            government: '/government',
+            government: '',
         },
         domain: '',
         currentApp

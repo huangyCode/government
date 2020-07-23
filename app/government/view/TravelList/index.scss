@@ -1,0 +1,41 @@
+.group{
+  width: 686px;
+  padding: 32px;
+  background: #fff;
+  margin: 32px auto 0 auto;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.group-title {
+  font-size:32px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(0,0,0,1);
+  margin-top: 16px;
+}
+.group-address{
+  display: flex;
+}
+.icon{
+  width: 20px;
+  height: 28px;
+  margin-right: 10px;
+  margin-top: 22px;
+}
+.address {
+  width:394px;
+  font-size:28px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(84,85,106,1);
+  line-height:44px;
+  margin-top: 14px;
+}
+
+.img {
+  width: 176px;
+  height: 176px;
+  border-radius:8px;
+}
