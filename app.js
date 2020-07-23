@@ -4,8 +4,7 @@
  * @date: 2017/6/23
  */
 'use strict';
-const env = process.env.NODE_ENV || 'test';
-const port = env === 'production' ? 9090 : 9080;
+const port = 3100;
 const express = require('express');
 const path = require('path');
 const app = express();

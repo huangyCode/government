@@ -11,7 +11,9 @@
     "build": "webpack --mode development --config ./webpack.config.js ",
     "start": "webpack-dev-server --mode development --config ./webpack.config.js",
     "build-prd": "webpack --mode production --config ./webpack.config.js",
-    "start-prd": "webpack-dev-server --mode production --config ./webpack.config.js"
+    "start-prd": "webpack-dev-server --mode production --config ./webpack.config.js",
+    "server": "forever start app.js",
+    "stop": "forever stop app.js"
   },
   "dependencies": {
     "dateformat": "^3.0.3",
@@ -72,7 +74,8 @@
     "webpack-dev-server": "^3.1.3",
     "webpack-merge": "^4.1.4",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "forever": "^0.15.3"
   },
   "author": "陈峰 <feng.chen@yoho.cn>",
   "license": "ISC",
