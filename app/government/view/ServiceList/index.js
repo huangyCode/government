@@ -1,18 +1,35 @@
 import React, {PureComponent} from 'react';
 import './index.scss'
 import goImg from '../../static/img/icon_go@2x.png'
-import listJson from '../../listJson'
 import * as config from '../../../../config';
+import api from '../../api'
 
 export default class ServiceList extends PureComponent {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            list: []
+        };
+    }
+
 
     link=(i,w)=>{
         window.location.href  = `${document.location.protocol}//${document.location.host}${config.routerPath[config.currentApp]}/serviceDetail.html?i=${i}&w=${w}`;
 
     }
 
+    componentDidMount() {
+        this.fetchList()
+    }
+
+    fetchList = async () =>{
+        let res = await api.serviceList();
+        this.setState({list:res.data || []})
+    }
+
     render() {
-        let list = listJson
+        let {list} = this.state
 
         return <div>
             {list && list.length && list.map((value,i) => {
@@ -33,7 +50,7 @@ export default class ServiceList extends PureComponent {
                         })}
                     </div>
                 </div>
-            })}
+            }) || null}
         </div>
     }
 }

@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./app/government/view/TravelRoute/index.scss"],"names":[],"mappings":"AAAA;AACA;AACA,eAAe;;AAEf;AACA;AACA;AACA,qBAAqB","file":"css/travelRoute.css","sourcesContent":["html, body {\n  width: 100%;\n  height: 100%; }\n\nmap {\n  width: 100%;\n  height: 100%;\n  background: yellow; }\n"],"sourceRoot":""}

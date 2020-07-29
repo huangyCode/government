@@ -4,14 +4,14 @@ module.exports = {
         routerPath: {
             government: '',
         },
-        domain: '',
+        domain: 'https://api.doallcollect.com',
         currentApp
     },
     development: {
         routerPath: {
             government: '',
         },
-        domain: '',
+        domain: 'https://api.doallcollect.com',
         currentApp
     }
 }[process.env.NODE_ENV || 'development']

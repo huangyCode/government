@@ -1,9 +1,8 @@
 import httpService from '../../../common/httpService'
 import config from '../../../config'
 
-let conf = params => httpService.postJson(config.domain + '/api/activity/wheelSurf/conf', params);
-let start = params => httpService.postJson(config.domain + '/api/activity/wheelSurf/start', params);
-let prize = params => httpService.postJson(config.domain + '/api/activity/wheelSurf/user/prize', params);
-let resource = query => httpService.get(config.domain + '/api/common/resource', query);
+let serviceList = params => httpService.postJson(config.domain + '/government/serviceList', params);
+let serviceDetail = params => httpService.postJson(config.domain + '/government/serviceDetail', params);
+let travelList = params => httpService.postJson(config.domain + '/government/travelList', params);
 
-export default {conf, start, prize, resource};
+export default {serviceList, serviceDetail, travelList};

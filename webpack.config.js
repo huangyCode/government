@@ -66,7 +66,7 @@ module.exports = {
     entry: [`./app/${config.currentApp}/index.js`],
     //项目输出目录
     output: {
-        chunkFilename: 'routes/[name].[chunkhash:8].chunk.js',
+        chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[chunkhash:8].js',
     },
@@ -93,7 +93,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif)$/,
-                use: "url-loader?limit=8192",
+                use: "url-loader?limit=8192&name=images/[name].[hash:7].[ext]",
             },
             // {test: /\.html$/, use: 'html-withimg-loader'},
             {test: /\.json$/, use: 'json-loader'}
